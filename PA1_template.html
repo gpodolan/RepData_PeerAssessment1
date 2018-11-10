@@ -174,7 +174,7 @@ ggplot(by_interval, aes(x = interval, y = mean_steps)) + geom_line() + ggtitle(&
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
 <pre class="r"><code>count_na_values &lt;- sum(is.na(raw_data))</code></pre>
-<p>There are 2304 NA values in the data.</p>
+<p>There are 2304 NA values in the data. These values will be imputed with the mean for the corresponding 5-minute interval over all days.</p>
 <pre class="r"><code>no_na &lt;- function(x) replace(x, is.na(x), mean(x, na.rm = T))
 no_na_data &lt;- raw_data %&gt;% group_by(interval) %&gt;% mutate(steps = no_na(steps))
 

@@ -53,7 +53,7 @@ The interval with the the maximum number of steps is `r max_interval`.
 count_na_values <- sum(is.na(raw_data))
 ```
 
-There are `r count_na_values` NA values in the data.
+There are `r count_na_values` NA values in the data. These values will be imputed with the mean for the corresponding 5-minute interval over all days.
 
 ```{r impute_values}
 

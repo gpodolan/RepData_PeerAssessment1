@@ -93,7 +93,7 @@ The interval with the the maximum number of steps is 835.
 count_na_values <- sum(is.na(raw_data))
 ```
 
-There are 2304 NA values in the data.
+There are 2304 NA values in the data. These values will be imputed with the mean for the corresponding 5-minute interval over all days.
 
 
 ```r
